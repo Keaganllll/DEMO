@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Demo Barber Lounge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-name">PLACEHOLDER BARBER LOUNGE</div>
+        <div class="brand-sub">Luxury Cuts • City, State</div>
+      </div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="active" href="about.html">About</a>
+      <a href="booking.html">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-title container">
+    <h1>About</h1>
+    <p>A luxury, clean experience designed for consistent results.</p>
+  </div>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div class="card pad">
+        <div class="kicker">The experience</div>
+        <h2 style="margin-top:10px">Clean space. Sharp finish.</h2>
+        <p>
+          This is placeholder copy. Replace with the shop’s story, the vibe, and what makes
+          them different (walk-ins, appointment-only, specialties, etc.).
+        </p>
+        <p class="small">
+          Pro tip: Include “By appointment” + the service area. It helps Google and clients.
+        </p>
+      </div>
+
+      <div class="card pad">
+        <div class="kicker">Visit us</div>
+        <h2 style="margin-top:10px">Location & Contact</h2>
+
+        <p class="small"><strong style="color:#fff">Phone:</strong> (000) 000-0000</p>
+        <p class="small">
+          <strong style="color:#fff">Address:</strong><br>
+          123 Luxury Ave, Suite 100<br>
+          City, ST
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn" id="callBtnAbout">Call</a>
+          <a class="btn primary" id="directionsBtnAbout" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn ghost" href="booking.html">Book</a>
+        </div>
+
+        <hr class="sep" />
+        <p class="small">Hours: Mon–Sat 10am–7pm (Demo)</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="mobile-book" href="booking.html">Book Appointment</a>
+
+<footer>
+  <div class="container">© <span id="y"></span> PLACEHOLDER BARBER LOUNGE • Demo</div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  (function () {
+    const phoneNumber = "+10000000000"; // TODO replace
+    const address = "123 Luxury Ave Suite 100, City, ST"; // TODO replace
+
+    const appleMaps = "https://maps.apple.com/?daddr=" + encodeURIComponent(address);
+    const googleMaps = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(address);
+    const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+
+    const callBtn = document.getElementById("callBtnAbout");
+    if (callBtn) callBtn.href = "tel:" + phoneNumber;
+
+    const dirBtn = document.getElementById("directionsBtnAbout");
+    if (dirBtn) dirBtn.href = isApple ? appleMaps : googleMaps;
+  })();
+</script>
+
+</body>
+</html>
