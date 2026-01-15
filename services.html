@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Demo Barber Lounge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-name">PLACEHOLDER BARBER LOUNGE</div>
+        <div class="brand-sub">Luxury Cuts • City, State</div>
+      </div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="booking.html">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-title container">
+    <h1>Services</h1>
+    <p>Luxury menu layout (demo prices). Replace with the shop’s real pricing anytime.</p>
+  </div>
+
+  <section class="section">
+    <div class="container grid-3">
+      <div class="card pad service">
+        <span class="pill">Most Booked</span>
+        <h3 style="margin-top:10px">Signature Haircut</h3>
+        <p>Consult, precision cut, finish, and lineup.</p>
+        <div class="price"><span>Demo</span><span>$40</span></div>
+      </div>
+
+      <div class="card pad service">
+        <span class="pill">Most Booked</span>
+        <h3 style="margin-top:10px">Fade / Taper</h3>
+        <p>Detailed blend with crisp edges.</p>
+        <div class="price"><span>Demo</span><span>$45</span></div>
+      </div>
+
+      <div class="card pad service">
+        <h3>Haircut + Beard</h3>
+        <p>Full service combo with beard shape.</p>
+        <div class="price"><span>Demo</span><span>$60</span></div>
+      </div>
+
+      <div class="card pad service">
+        <h3>Beard Trim</h3>
+        <p>Shape, lineup, and clean finish.</p>
+        <div class="price"><span>Demo</span><span>$25</span></div>
+      </div>
+
+      <div class="card pad service">
+        <h3>Kids Cut</h3>
+        <p>Quick, clean, and patient service.</p>
+        <div class="price"><span>Demo</span><span>$30</span></div>
+      </div>
+
+      <div class="card pad service">
+        <h3>Lineup</h3>
+        <p>Edge-up and detail work.</p>
+        <div class="price"><span>Demo</span><span>$15</span></div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:18px">
+      <div class="card pad" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+        <div>
+          <div class="kicker">Ready when you are</div>
+          <h2 style="margin-top:10px">Book your time</h2>
+          <p class="small">Online booking keeps everything simple and professional.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn primary" href="booking.html">Book Appointment</a>
+          <a class="btn ghost" href="gallery.html">See Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="mobile-book" href="booking.html">Book Appointment</a>
+
+<footer>
+  <div class="container">© <span id="y"></span> PLACEHOLDER BARBER LOUNGE • Demo</div>
+</footer>
+
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
