@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book | Demo Barber Lounge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-name">PLACEHOLDER BARBER LOUNGE</div>
+        <div class="brand-sub">Luxury Cuts • City, State</div>
+      </div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a class="active" href="booking.html">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-title container">
+    <h1>Book an Appointment</h1>
+    <p>One tap booking for a premium experience.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="card pad" style="text-align:center">
+        <div class="kicker">Book online</div>
+        <h2 style="margin-top:10px">Choose a time that works</h2>
+        <p class="small">
+          Replace this button with the shop’s booking link (Squire, Calendly, Square, etc.).
+          If the booking platform blocks embedding, the button is the best professional setup.
+        </p>
+
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px">
+          <a class="btn primary" id="bookingLink" target="_blank" rel="noopener" href="https://example.com">
+            Open Booking
+          </a>
+          <a class="btn" id="callBtnBook">Call</a>
+          <a class="btn ghost" id="directionsBtnBook" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+
+        <hr class="sep" />
+        <p class="small" style="margin-bottom:0">
+          Address: 123 Luxury Ave, Suite 100, City, ST • Hours: Mon–Sat 10am–7pm (Demo)
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="mobile-book" href="https://example.com" target="_blank" rel="noopener">Book Appointment</a>
+
+<footer>
+  <div class="container">© <span id="y"></span> PLACEHOLDER BARBER LOUNGE • Demo</div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  (function () {
+    const phoneNumber = "+10000000000"; // TODO replace
+    const address = "123 Luxury Ave Suite 100, City, ST"; // TODO replace
+    const bookingUrl = "https://example.com"; // TODO replace
+
+    const appleMaps = "https://maps.apple.com/?daddr=" + encodeURIComponent(address);
+    const googleMaps = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(address);
+    const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+
+    const callBtn = document.getElementById("callBtnBook");
+    if (callBtn) callBtn.href = "tel:" + phoneNumber;
+
+    const dirBtn = document.getElementById("directionsBtnBook");
+    if (dirBtn) dirBtn.href = isApple ? appleMaps : googleMaps;
+
+    const book = document.getElementById("bookingLink");
+    if (book) book.href = bookingUrl;
+
+    const mobileBook = document.querySelector(".mobile-book");
+    if (mobileBook) mobileBook.href = bookingUrl;
+  })();
+</script>
+
+</body>
+</html>
