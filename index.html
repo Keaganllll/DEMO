@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black & White Barber Lounge | Demo</title>
+  <meta name="description" content="Luxury black & white barber website demo. Booking, services, gallery, location, and mobile-first design." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-name">PLACEHOLDER BARBER LOUNGE</div>
+        <div class="brand-sub">Luxury Cuts • City, State</div>
+      </div>
+    </a>
+
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="booking.html">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <div class="kicker">Premium grooming experience</div>
+        <h1>Precision cuts. Luxury feel. Zero hassle booking.</h1>
+        <p>
+          A clean, high-end barbershop experience with consistent results.
+          Book online in seconds, or tap to call if you have questions.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" id="bookBtn" href="booking.html">Book Appointment</a>
+          <a class="btn" id="callBtn">Call</a>
+          <a class="btn ghost" id="directionsBtn" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="small">
+          <strong style="color:#fff">Address:</strong> 123 Luxury Ave, Suite 100, City, ST<br>
+          <strong style="color:#fff">Hours:</strong> Mon–Sat 10am–7pm (Demo)
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="card pad stat">
+          <strong>Book fast</strong>
+          <span>Online booking in under 30 seconds</span>
+        </div>
+        <div class="card pad stat">
+          <strong>Clean details</strong>
+          <span>Fades • Tapers • Beard work</span>
+        </div>
+        <div class="card pad stat">
+          <strong>Mobile-first</strong>
+          <span>Designed for iPhone + Android</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="title-row">
+        <h2>Featured Work</h2>
+        <span class="pill">Demo Gallery</span>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div class="card pad">
+        <div class="kicker">Why clients choose us</div>
+        <h2 style="margin-top:10px">Luxury service, consistent results.</h2>
+        <p>
+          Built for clients who want a clean experience: easy booking, on-time appointments,
+          and a sharp finish every time.
+        </p>
+        <div class="grid-3" style="margin-top:14px">
+          <div class="card pad" style="box-shadow:none">
+            <strong>Easy booking</strong>
+            <div class="small">Tap, choose a time, you're set.</div>
+          </div>
+          <div class="card pad" style="box-shadow:none">
+            <strong>Attention to detail</strong>
+            <div class="small">Crisp lineups and blends.</div>
+          </div>
+          <div class="card pad" style="box-shadow:none">
+            <strong>Professional vibe</strong>
+            <div class="small">Clean space, luxury feel.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <div class="kicker">New here?</div>
+        <h2 style="margin-top:10px">What to expect</h2>
+        <p>1) Pick your service • 2) Choose a time • 3) Show up fresh</p>
+        <hr class="sep" />
+        <p class="small">
+          Want the best experience? Add a note when you book (hair style, beard preference, etc.).
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn primary" href="booking.html">Book Now</a>
+          <a class="btn ghost" href="services.html">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="title-row">
+        <h2>Reviews</h2>
+        <span class="pill">Demo</span>
+      </div>
+
+      <div class="grid-3">
+        <div class="card pad">
+          <div class="small">★★★★★</div>
+          <p>“Cleanest fade I’ve had in a long time. Booking was easy.”</p>
+          <div class="small">— Demo Client</div>
+        </div>
+        <div class="card pad">
+          <div class="small">★★★★★</div>
+          <p>“Professional vibe and consistent cuts. Highly recommend.”</p>
+          <div class="small">— Demo Client</div>
+        </div>
+        <div class="card pad">
+          <div class="small">★★★★★</div>
+          <p>“In and out, sharp lineup, and the shop is super clean.”</p>
+          <div class="small">— Demo Client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- sticky mobile CTA -->
+<a class="mobile-book" href="booking.html">Book Appointment</a>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> PLACEHOLDER BARBER LOUNGE • Demo Website
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // SMART CALL + MAPS (one button each)
+  (function () {
+    const phoneNumber = "+10000000000"; // TODO replace
+    const address = "123 Luxury Ave Suite 100, City, ST"; // TODO replace
+
+    const appleMaps = "https://maps.apple.com/?daddr=" + encodeURIComponent(address);
+    const googleMaps = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(address);
+
+    const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+
+    const callBtn = document.getElementById("callBtn");
+    if (callBtn) callBtn.href = "tel:" + phoneNumber;
+
+    const dirBtn = document.getElementById("directionsBtn");
+    if (dirBtn) dirBtn.href = isApple ? appleMaps : googleMaps;
+  })();
+</script>
+
+</body>
+</html>
